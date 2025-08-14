@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mission Puchuuu – 1 Month Special</title>
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffe6eb, #ffffff);
+    color: #444;
+    text-align: center;
+  }
+  .container { max-width: 600px; margin: auto; padding: 20px; }
+  h1 { color: #ff4d6d; }
+  .mission {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  input[type="text"] { padding: 10px; border: 1px solid #ccc; border-radius: 5px; width: 80%; margin-top: 10px; }
+  button {
+    background: #ff4d6d; color: white; border: none; padding: 10px 20px;
+    border-radius: 20px; margin-top: 10px; cursor: pointer;
+  }
+  button:hover { background: #ff3355; }
+  img { max-width: 100%; border-radius: 15px; }
+</style>
+</head>
+<body>
+  <!-- Background romantic music -->
+  <audio autoplay loop hidden>
+    <source src="data:audio/mp3;base64,PUT-YOUR-MP3-BASE64-HERE" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>💖 Mission Puchuuu – 1 Month Special 💖</h1>
+    <p>Rules: No skipping clues. Complete each mission to unlock the next.</p>
+
+    <!-- Mission 1 -->
+    <div class="mission" id="mission1">
+      <h2>Mission 1: The Starting Point</h2>
+      <p>We started counting days from when you became my official headache (and happiness). Which date is that?</p>
+      <input type="text" id="answer1" placeholder="Enter answer..." />
+      <button onclick="checkAnswer(1)">Submit</button>
+    </div>
+
+    <!-- Mission 2 -->
+    <div class="mission" id="mission2" style="display:none;">
+      <h2>Mission 2: Memory Decoder</h2>
+      <p>Jumbled Word: ADPNA</p>
+      <input type="text" id="answer2" placeholder="Enter answer..." />
+      <button onclick="checkAnswer(2)">Submit</button>
+    </div>
+
+    <!-- Mission 3 -->
+    <div class="mission" id="mission3" style="display:none;">
+      <h2>Mission 3: Bubba’s Favorite Scene</h2>
+      <p><em>Pyar toh mujhe aasani se ho gaya … lekin usse sabit karne ke liye main kadi mehnat karoonga.</em></p>
+      <input type="text" id="answer3" placeholder="Enter movie name..." />
+      <button onclick="checkAnswer(3)">Submit</button>
+    </div>
+
+    <!-- Mission 4 -->
+    <div class="mission" id="mission4" style="display:none;">
+      <h2>Mission 4: Black Beauty 🖤</h2>
+      <p>Send Bubba a selfie in black.</p>
+      <button onclick="unlockMission(5)">I sent it!</button>
+    </div>
+
+    <!-- Mission 5 -->
+<div class="mission" id="mission5" style="display:none;">
+  <h2>Mission 5: Strawberry Kitty 🍓🐱</h2>
+  <p>How many strawberries can you spot in this picture?</p>
+  <img src="https://i.postimg.cc/CKy57DjH/IMG-20250813-114732.jpg" alt="Strawberry Cat" />
+  <input type="text" id="answer5" placeholder="Enter number..." />
+  <button onclick="checkAnswer(5)">Submit</button> 
+</div>
+
+    <!-- Mission 6 -->
+    <div class="mission" id="mission6" style="display:none;">
+      <h2>Mission 6: Secret Playlist 🎵</h2>
+      <p>Choose 1 song for me. I’ll choose 1 for you.</p>
+      <input type="text" id="answer6" placeholder="Enter song name..." />
+      <button onclick="checkAnswer(6)">Submit</button>
+    </div>
+
+    <!-- Mission 7 -->
+    <div class="mission" id="mission7" style="display:none;">
+      <h2>Mission 7: Foodie Queen 🍲</h2>
+      <p>Name 3 dishes you want to eat with me.</p>
+      <input type="text" id="answer7" placeholder="Enter dishes..." />
+      <button onclick="checkAnswer(7)">Submit</button>
+    </div>
+
+    <!-- Mission 8 -->
+    <div class="mission" id="mission8" style="display:none;">
+      <h2>Mission 8: After-Bath Cuteness Quest 🚿</h2>
+      <p>Why does Bubba melt after seeing your after bath photo?</p>
+      <input type="text" id="answer8" placeholder="Enter reason..." />
+      <button onclick="checkAnswer(8)">Submit</button>
+    </div>
+
+    <!-- Mission 9 -->
+    <div class="mission" id="mission9" style="display:none;">
+      <h2>Mission 9: Love Letter Key 💌</h2>
+      <p>The key to Bubba’s 1-month gift is hidden in this image.</p>
+      <img src="data:image/png;base64,PUT-YOUR-BASE64-HERE" alt="Click me" style="width: 150px; cursor: pointer;" onclick="showSurprise()" />
+    </div>
+
+    <!-- Mission 10 -->
+    <div class="mission" id="mission10" style="display:none;">
+      <h2>My Love Letter to Puchuuu 💌</h2>
+      <section style="background: linear-gradient(135deg, #ffe6eb, #fff); padding: 30px; border-radius: 20px; max-width: 600px; margin: 50px auto; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+        <div style="text-align: center; font-size: 40px; color: #ff4d6d;">❤️</div>
+        <p style="color: #444; font-size: 16px; line-height: 1.8; white-space: pre-wrap; text-align: justify;">
+Hlooo mo drama princess 👑,
+
+Happy 1 month, puchuuu! 🐼
+Biswas hauni ki 30 din hela already tume mora official headache… mane mora official happiness heiki 😅.
+Tume jete bele bath karikina aasa, se cuteness ta literally ban hei jiba darkar 💧… aau tume khau thiba bele se panda level ra adorableness 😩 dekhi mu pura flat!!!
+
+Mun sabu moment enjoy karichi — tama jokes, tama drama, tama sabu nakhra (except boys wala 😒), au tama black colour love (jouta mora bhi favourite achi). Tame mora perfect cutest troublemaker, au forever favorite wala notificationnnnn.
+
+Puchuuu, tame mora favorite playlist jiye — soft, sweet, au impossible to skip. Au eita jani rakha… mu tumaku sabu bela pain rakhuchi. No refunds, no exchanges 😌.
+
+Ebe asa celebrate kariba more months of love, more drama, more khaiba wala moments, more random “Bubbaaa” calls, au lifetime being "tama number one fan (au tama cuteness attack ra victim 😚)".
+
+Love you from the corridors of Yuvodaya to the last breath of my life. 🐼❤️
+— Tama Bubba 😁😘💗
+        </p>
+      </section>
+    </div>
+  </div>
+
+<script>
+  const correctAnswers = {
+    1: '17 july',
+    2: 'panda',
+    3: 'ramaiya vastavaiya',
+    5: '17'
+  };
+
+  function checkAnswer(missionNum) {
+    const input = document.getElementById('answer' + missionNum);
+    const answer = input.value.trim().toLowerCase();
+    if (missionNum === 6 || missionNum === 7 || missionNum === 8) {
+      unlockMission(missionNum + 1);
+      input.value = '';
+    } else if (answer === correctAnswers[missionNum]) {
+      unlockMission(missionNum + 1);
+      input.value = '';
+    } else {
+      alert('Oops, try again puchuuu! 😘');
+    }
+  }
+
+  function unlockMission(missionNum) {
+    document.querySelectorAll('.mission').forEach(m => m.style.display = 'none');
+    document.getElementById('mission' + missionNum).style.display = 'block';
+  }
+
+  function showSurprise() {
+    unlockMission(10);
+  }
+
+  unlockMission(1);
+</script>
+</body>
+</html>
